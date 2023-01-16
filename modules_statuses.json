@@ -1,0 +1,8 @@
+{
+    "Admin": true,
+    "Home": true,
+    "Post": true,
+    "PostCategory": true,
+    "Setting": true,
+    "User": true
+}

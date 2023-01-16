@@ -1,0 +1,1 @@
+$((function(){"use strict";$(document).ready((function(){$(".select2").select2({placeholder:"یکی را انتخاب کن"}),$(".select2-no-search").select2({minimumResultsForSearch:1/0,placeholder:"یکی را انتخاب کن"})})),$("#selectForm").parsley(),$("#selectForm2").parsley()}));
