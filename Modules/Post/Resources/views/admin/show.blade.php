@@ -45,7 +45,11 @@
                         <div class="table-responsive">
                             <table class="table table-striped mg-b-0 text-md-nowrap">
                                 <div class="table-header w-100 mb-3 d-flex gap-2">
+                                @if($post->image)
                                     <img class="img-thumbnail" src="{{ asset($post->image['indexArray']['medium']) }}" alt="{{ $post->title ?? 'تصویر' }}">
+                            @else
+                            <img src="{{ asset('modules/home/img/404-football.gif') }}" alt="{{ $post->title }}">
+                            @endif
                                     <div>
                                         <h6 class="font-weight-bold">خلاصه :</h6>
                                         <p>{{ $post->summary ?? '-' }}</p>

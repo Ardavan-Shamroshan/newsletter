@@ -42,6 +42,8 @@
                                 <div class="main-news-top-title d-none d-sm-block">
                                     <p>
                                         <a href="{{ route('postcategory', $post->category) }}">{{ $post->category->name ?? 'دسته بندی' }}</a>
+                                        <span>-</span>
+                                        <span>بازدید {{ $post->views }} </span>
                                     </p>
                                 </div>
                                 <div class="main-news-card-title">

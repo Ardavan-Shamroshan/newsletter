@@ -123,7 +123,12 @@
                     <div class="col-4">
                         {{-- image --}}
                         <div class="form-group mb-4">
+                            @if ($post->image)
+
                             <input type="file" name="image" class="dropify" data-default-file="{{ asset($post->image['indexArray']['medium']) }}" data-height="200">
+                        @else
+                            <input type="file" name="image" class="dropify" data-height="200">
+                            @endif
                             <div class="dropify-preview" style="display: none;">
                                 <span class="dropify-render"></span>
                                 <div class="dropify-infos">

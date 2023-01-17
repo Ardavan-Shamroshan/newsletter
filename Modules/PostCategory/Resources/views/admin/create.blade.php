@@ -91,7 +91,7 @@
                     {{-- cancel --}}
                     <a href="{{ route('admin.postcategory') }}" class="btn btn-secondary mb-3"><i class="fe fe-slash"></i> لغو</a>
                 </form>
-            </div>z
+            </div>
         </div>
         <!--/div-->
     </div>

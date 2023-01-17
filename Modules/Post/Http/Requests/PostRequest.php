@@ -12,16 +12,17 @@ class PostRequest extends FormRequest
      *
      * @return array
      */
-    public function rules() {
-        if ($this->isMethod('post'))
-            return [
-                'title' => ['required', 'max:120', 'min:2'],
-                'summary' => ['required', 'max:300', 'min:2'],
-                'body' => ['required', 'max:20480', 'min:2'],
-                'category_id' => ['required', Rule::exists('post_categories', 'id')],
-                'image' => ['nullable', 'image', 'mimes:jpg,jpeg,bmp,png,gif'],
-                'slug' => [Rule::unique('posts', 'slug')],
-            ];
+    public function rules()
+    {
+
+        return [
+            'title' => ['required', 'max:120', 'min:2'],
+            'summary' => ['required', 'max:300', 'min:2'],
+            'body' => ['required', 'max:20480', 'min:2'],
+            'category_id' => ['required', Rule::exists('post_categories', 'id')],
+            'image' => ['nullable', 'image', 'mimes:jpg,jpeg,bmp,png,gif'],
+            'slug' => [Rule::unique('posts', 'slug')->ignore($this->post)],
+        ];
     }
 
     /**
@@ -29,14 +30,16 @@ class PostRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize() {
+    public function authorize()
+    {
         return true;
     }
 
     /**
      * messages
      */
-    public function attributes() {
+    public function attributes()
+    {
         return [
             //
         ];

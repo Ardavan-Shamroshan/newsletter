@@ -94,7 +94,6 @@ class AdminPostController extends Controller
      */
     public function update(PostRequest $request, Post $post, ImageService $imageService) {
         $inputs = $request->all();
-
          $inputs['author_id'] = Auth::id();
 
         // Image upload
